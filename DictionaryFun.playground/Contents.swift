@@ -14,38 +14,42 @@
  */
 // write your code here
 
-
-
+var dictionatyStateCapital = [
+    "New York"  : "Albany",
+    "Ohio"      : "Columbus",
+    "Florida"   : "Tallahassee",
+    "Georgia"   : "Atlanta",
+    "Kentucky"  : "Frankfort"
+]
 
 /*: question2
  ### 2. What is the type of the dictionary you created in Question 1?
  */
 
-
-
+// [String : String]
 
 /*: question3
  ### 3. Create a variable called `capital` and assign to it Florida's capital from the dictionary.
  */
 // write your code here
 
-
-
+var capital = dictionatyStateCapital["Florida"]
 
 /*: question4
  ### 4. Unwrap `capital` and print out the message "The capital of Florida is <Capital>" to the console.
  */
 // write your code here
 
-
-
+if let capital = capital {
+    print("The capital of Florida id \(capital)")
+}
 
 /*: question5
  ### 5. Create a variable called `anotherCapital` and assign to it the value of Pennsylvania's capital from the dictionary.
  */
 // write your code here
 
-
+let anotherCapital = dictionatyStateCapital["Pennsylvania"]
 
 
 /*: question6
@@ -53,32 +57,36 @@
  */
 // write your code here
 
-
-
+if let anotherCapital = anotherCapital {
+    print("\(anotherCapital)")
+} else {
+    print("I don't know Pennsylvania's capital")
+}
 
 /*: question7
  ### 7. Pennsylvania's capital is Harrisburg. Add it to your state capitals dictionary.
  */
 // write your code here
 
-
-
+dictionatyStateCapital["Pennsylvania"] = "Harrisburg"
 
 /*: question8
  ### 8. Retrieve Pennsylvania's capital from your dictionary. Unwrap it and print the message "Pennsylvania's capital is <Capital>" to the console.
  */
 // write your code here
 
-
-
+let capitalPennsylvania = dictionatyStateCapital["Pennsylvania"]
+if let capitalPennsylvania = capitalPennsylvania {
+    print("Pennsylvania's capital is \(capitalPennsylvania)")
+}
 
 /*: question9
  ### 9. We don't really care about Pennsylvania's capital. Delete it from the dictionary. Print your dictionary to the console to ensure it's gone.
  */
 // write your code here
 
-
-
+dictionatyStateCapital.removeValueForKey("Pennsylvania")
+print(dictionatyStateCapital)
 
 /*: question10
  ### 10. You have been given the constant `state` with a state name. Use that constant to retrieve the state's capital from the dictionary. Print "The capital of <State> is <Capital>" to the console.
@@ -86,8 +94,10 @@
 let state = "New York"
 // write your code here
 
-
-
+let stateCapital = dictionatyStateCapital[state]
+if let stateCapital = stateCapital {
+    print("The capital of \(state) is \(stateCapital)")
+}
 
 /*: question11
  ### 11. Dictionaries don't have to contain just `String` keys and values. Create a dictionary that contains the name of a band, and the members of that band. Here are the bands and members that you can use:
@@ -101,14 +111,19 @@ let state = "New York"
  */
 // write your code here
 
-
+var dictionaryBandMembers = [
+    "Nirvana"       : ["Kurt Cobain", "Krist Novoselic", "Dave Grohl"],
+    "The Beatles"   : ["John Lennon", "George Harrison", "Paul McCartney", "Ringo Starr"],
+    "The Breeders"  : ["Kim Deal", "Kelley Deal", "Josephine Wiggs", "Jim Macpherson"],
+    "Pixies"        : ["Frank Black", "Joey Santiago", "Kim Deal", "David Lovering"]
+]
 
 
 /*: question12
  ### 12. What is the type of the dictionary you created in Question 11?
  */
 
-
+// [String : [String]]
 
 
 /*: question13
@@ -117,7 +132,10 @@ let state = "New York"
 let bandName = "Pixies"
 // write your code here
 
-
+let band = dictionaryBandMembers[bandName]
+if let band = band {
+    print(band)
+}
 
 
 /*:
